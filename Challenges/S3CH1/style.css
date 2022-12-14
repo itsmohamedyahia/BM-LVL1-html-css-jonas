@@ -1,0 +1,48 @@
+/* mutltiple & main */
+h1,
+h3,
+.ship,
+button {
+  text-transform: uppercase;
+}
+
+article {
+  font-family: sans-serif;
+  border: 5px solid black;
+}
+/* text */
+h1 {
+  background-color: rgb(239, 239, 243);
+  text-align: center;
+}
+.price {
+  font-size: 20px;
+}
+.ship {
+  font-size: 12px;
+  color: rgb(87, 87, 87);
+  font-weight: bold;
+}
+/* link */
+a:link {
+  color: black;
+}
+a:hover {
+  text-decoration: none;
+}
+/* button */
+button {
+  background-color: black;
+  color: white;
+  font-size: 18px;
+  border: none;
+}
+button:hover {
+  color: black;
+  background-color: white;
+  cursor: pointer;
+}
+/* list */
+ul {
+  list-style-type: square;
+}
