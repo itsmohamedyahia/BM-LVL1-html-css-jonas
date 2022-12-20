@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /*Main Colors
+              color: #343a40;
+              color: #087f5b;
+              */
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      nav,
+      section,
+      main,
+      aside {
+        /* padding-top: 16px; */
+        padding-top: 24px;
+      }
+
+      body {
+        height: 100vh;
+        display: grid;
+        /* grid-template-columns: 40px 200px 1fr 150px;
+        grid-template-rows: 60px 1fr; */
+        grid-template-columns: 80px 400px 1fr 250px;
+        grid-template-rows: 80px 1fr;
+        text-align: center;
+        font-size: 24px;
+        font-weight: bold;
+        font-family: sans-serif;
+        color: #343a40;
+      }
+
+      nav {
+        background-color: #343a40;
+        color: #fff;
+        grid-row: 1/-1;
+        font-size: 15px;
+        padding: 5px;
+      }
+
+      menu {
+        background-color: #7048e8;
+        color: #fff;
+        grid-column: 2/-1;
+        text-align: left;
+        /* padding-left: 30px;
+        padding-right: 30px; */
+        padding: 0 40px;
+        display: flex;
+        gap: 12px;
+        align-items: center;
+      }
+      section {
+        background-color: #e6ecef;
+        padding: 40px;
+        display: flex;
+
+        flex-direction: column;
+        gap: 40px;
+        overflow: scroll;
+      }
+      .email {
+        height: 96px;
+        background-color: #adb5bd;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-shrink: 0;
+      }
+      aside {
+        background-color: #e6ecef;
+      }
+      button {
+        padding: 8px 12px;
+        /* font-size: 14px; */
+        font-size: 16px;
+        background-color: rgb(81, 53, 186);
+        border: none;
+        cursor: pointer;
+        color: white;
+      }
+      button:last-child {
+        background-color: #d6336c;
+        margin-left: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>Nav</nav>
+    <menu>
+      <button>New</button>
+      <button>Reply</button>
+      <button>Forward</button>
+      <button>Mark Unread</button>
+      <button>Trash</button>
+    </menu>
+    <section>
+      <div class="email">Email 1</div>
+      <div class="email">Email 2</div>
+      <div class="email">Email 3</div>
+      <div class="email">Email 4</div>
+      <div class="email">Email 5</div>
+      <div class="email">Email 6</div>
+      <div class="email">Email 7</div>
+      <div class="email">Email 8</div>
+      <div class="email">Email 9</div>
+    </section>
+    <main>Email View</main>
+    <aside>Additional Info</aside>
+  </body>
+</html>
