@@ -11,6 +11,7 @@ This repository contains the lecture code, challenges (assignments) and the fina
 ## Technologies / Principles Used
 - HTML
 - CSS
+- Javascript
 - UI/UX Design
 
 ## Live demo
