@@ -1,22 +1,22 @@
-# 📒 Coursework of the [Build Responsive Real-World Websites with HTML and CSS](https://www.udemy.com/course/design-and-develop-a-killer-website-with-html5-and-css3/) Course on Udemy by Jonas Schmedtmann
+# Coursework of the [Build Responsive Real-World Websites with HTML and CSS](https://www.udemy.com/course/design-and-develop-a-killer-website-with-html5-and-css3/) Course on Udemy by Jonas Schmedtmann
 
 This repository contains the lecture code, challenges (assignments) and the final project of the **Build Responsive Real-World Websites with HTML and CSS** Course on Udemy. The course covers frontend scripting technologies including **HTML, CSS** with some focus on **UI/UX web design principles**. 
 
-## 📋 Project List
+##  Project List
 - Omnifood
 
-## ♾️ Omnifood
+## Omnifood
 **Omnifood** is a technology company that focuses on consumer well-being through a healthy diet. Using an AI-centric approach, the app creates custom weekly meal plans and delivers the meals to users in selected cities.
 
-## 🤖 Technologies / Principles Used
+## Technologies / Principles Used
 - HTML
 - CSS
 - UI/UX Design
 
-## 📷 Live demo
+## Live demo
 Check out the **live demo** at https://omnifood-justmyahia.netlify.app/. I included a screen captured image of the website at the end of the file in case the server is down.
 
-## 🎓 Learning Outcomes
+## Learning Outcomes
 1. Writing **Semantic HTML**
 2. Understanding **CSS Box Model, Flexbox, and CSS Grid**
 3. Implementing many **CSS Properties**
@@ -25,10 +25,7 @@ Check out the **live demo** at https://omnifood-justmyahia.netlify.app/. I inclu
 6. Building **components** such as accordions, tables, and pagination
 7. Steps to building a great website, including **planning and design phases**.
 
-## 📜 Certificate
-Check out the certificate of completion at https://www.udemy.com/certificate/UC-8bac737a-ec58-4913-85e5-f889950707cb/
-
-## 🙏🏻 Acknowledgement
+## Acknowledgement
 I would like to thank **Jonas Schmedtmann** for delivering the information in a simple and effective way, and for focusing on creating beautiful websites while teaching to code. This course has been a great learning experience and has helped me to build a solid foundation in Front-End Development.
 
 &nbsp;
