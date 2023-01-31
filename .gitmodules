@@ -1,0 +1,3 @@
+[submodule "omnifood-website"]
+	path = omnifood-website
+	url = https://github.com/itsmohamedyahia/omnifood-website.git
