@@ -14,7 +14,7 @@ This repository contains the lecture code, challenges (assignments) and the fina
 - UI/UX Design
 
 ## 📷 Live demo
-Check out the **live demo** at https://omnifood-justmyahia.netlify.app/
+Check out the **live demo** at https://omnifood-justmyahia.netlify.app/. I included a screen captured image of the website at the end of the file in case the server is down.
 
 ## 🎓 Learning Outcomes
 1. Writing **Semantic HTML**
@@ -25,5 +25,12 @@ Check out the **live demo** at https://omnifood-justmyahia.netlify.app/
 6. Building **components** such as accordions, tables, and pagination
 7. Steps to building a great website, including **planning and design phases**.
 
+## 📜 Certificate
+Check out the certificate of completion at https://www.udemy.com/certificate/UC-8bac737a-ec58-4913-85e5-f889950707cb/
+
 ## 🙏🏻 Acknowledgement
 I would like to thank **Jonas Schmedtmann** for delivering the information in a simple and effective way, and for focusing on creating beautiful websites while teaching to code. This course has been a great learning experience and has helped me to build a solid foundation in Front-End Development.
+
+&nbsp;
+
+![screencapture-omnifood-justmyahia-netlify-app-2023-01-31-16_25_12](https://user-images.githubusercontent.com/112589857/215788316-250abda4-3457-455b-80c6-3405a42c2d6e.png)
