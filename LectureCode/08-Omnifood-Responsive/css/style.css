@@ -1,0 +1,688 @@
+/***************************************************/
+/* HEADER */
+/***************************************************/
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--prim-clr-bg);
+  /* usually we let content with padding define the height but here made it with height since header will be sticky as we scroll */
+  height: 9.6rem;
+  padding: 0 4.8rem;
+  position: relative;
+}
+.logo {
+  height: 2.2rem;
+}
+.logo-link {
+  padding: 0.8rem;
+  border-radius: 100px;
+}
+
+/***************************************************/
+/* NAVIGATION */
+/***************************************************/
+.main-nav-list {
+  list-style: none;
+  display: flex;
+  gap: 3.6rem;
+  align-items: center;
+}
+.main-nav-link {
+  padding: 0.8rem;
+  border-radius: 100px;
+}
+.main-nav-link:link,
+.main-nav-link:visited {
+  display: inline-block;
+  text-decoration: none;
+  color: var(--grey-clr-drk);
+  font-weight: 500;
+  font-size: 1.8rem;
+  transition: all 0.3s;
+}
+
+.main-nav-link:hover,
+.main-nav-link:active {
+  color: var(--prim-clr-drk);
+}
+
+/* added and selector to up the specifity in case this line of code gets above the .main-nav-link block which will trigger the color kinda black and we dont want that to happen */
+.main-nav-link.main-nav-cta:link,
+.main-nav-link.main-nav-cta:visited {
+  padding: 1.2rem 2.4rem;
+  border-radius: 9px;
+  color: #fff;
+  background-color: var(--prim-clr-def);
+}
+.main-nav-link.main-nav-cta:hover,
+.main-nav-link:active {
+  background-color: var(--prim-clr-drk);
+}
+
+/***************************************************/
+/* MOBILE */
+/***************************************************/
+.btn-mobile-nav {
+  border: none;
+  background: none;
+  cursor: pointer;
+  display: none;
+}
+.icon-mobile-nav {
+  height: 4.8rem;
+  width: 4.8rem;
+  color: var(--grey-clr-drk);
+}
+.icon-mobile-nav[name="close-outline"] {
+  display: none;
+}
+/***************************************************/
+/* HERO SECTION */
+/***************************************************/
+.section-hero {
+  background-color: var(--prim-clr-bg);
+  padding: 4.8rem 0 9.6rem 0;
+}
+
+.hero-fixed {
+  max-width: 130rem;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 9.6rem;
+  align-items: center;
+  padding: 0 3.2rem;
+}
+
+.hero-description {
+  font-size: 2rem;
+  line-height: 1.6;
+  margin-bottom: 4.8rem;
+}
+
+.section-hero .btn {
+  margin: 0.8rem;
+}
+
+.hero-img {
+  width: 100%;
+}
+
+.delivered-meals {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+  margin-top: 8rem;
+}
+
+.delivered-customers {
+  display: flex;
+}
+
+.delivered-customers img {
+  height: 4.8rem;
+  width: 4.8rem; /*safari-bug*/
+  border: 3px solid var(--prim-clr-bg);
+  border-radius: 50%;
+  margin-right: -1.6rem;
+}
+
+.delivered-customers img:last-child {
+  margin: 0;
+}
+
+.delivered-text {
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.delivered-text span {
+  color: var(--prim-clr-drk);
+  font-weight: 700;
+}
+/***************************************************/
+/* FEATURED IN SECTION */
+/***************************************************/
+.section-featured {
+  padding: 4.8rem 0 3.2rem 0;
+}
+.heading-featured {
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  letter-spacing: 0.75px;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 2.4rem;
+  color: var(--grey-clr-bold-onwt);
+}
+
+.logos {
+  display: flex;
+  justify-content: space-around;
+}
+
+.logos img {
+  height: 3.2rem;
+  filter: brightness(0);
+  opacity: 0.5;
+}
+/***************************************************/
+/* SECTION HOW  */
+/***************************************************/
+.section-how {
+  padding: 9.6rem 0;
+}
+.step-img-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.step-img {
+  width: 35%;
+}
+.step-number {
+  font-size: 8.6rem;
+  font-weight: 600;
+  color: var(--grey-clr-lt);
+  margin-bottom: 1.2rem;
+}
+
+.step-description {
+  font-size: 1.8rem;
+  line-height: 1.8;
+}
+
+.step-img-box::before,
+.step-img-box::after {
+  content: "";
+  display: block;
+  width: 60%;
+  /* height: 60%; /*doesnt work since there is no height given for parent **/
+  padding-bottom: 60%; /*60% of parent width */
+
+  position: absolute;
+  /* we dont need to set the position as it is a flex item and absolutely positioned items are affected by flex settings */
+  border-radius: 50%;
+  z-index: -1;
+}
+.step-img-box::before {
+  background-color: var(--prim-clr-bg);
+  width: 60%;
+  /* height: 60%; /*doesnt work since there is no height given for parent **/
+  padding-bottom: 60%; /*60% of parent width */
+  z-index: -2;
+}
+
+.step-img-box::after {
+  background-color: var(--prim-clr-bg-drk);
+  width: 45%;
+  padding-bottom: 45%;
+  z-index: -1;
+}
+
+/***************************************************/
+/* MEALS SECTION */
+/***************************************************/
+.section-meals {
+  padding: 9.6rem;
+}
+
+.meal {
+  box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
+  border-radius: 11px;
+  /* any content that gets out of this element will be hidden used when rounding the corner so content inside doesnt get rounded too so you have to use this property to make it look like it was rounded too */
+  overflow: hidden;
+  transition: all 0.4s;
+}
+
+.meal:hover {
+  /* transform: translate(0, -1.1rem); */
+  transform: translateY(-1.2rem);
+  /* box is now closer to the source of the light which comes from above the element */
+  box-shadow: 0 3.2rem 6.4rem rgba(0, 0, 0, 0.06);
+}
+
+.meal-text {
+  padding: 4.8rem;
+  padding-top: 3.2rem;
+}
+.meal-tags {
+  margin-bottom: 1.2rem;
+  display: flex;
+  gap: 0.4rem;
+}
+.tag {
+  display: inline-block;
+  padding: 0.4rem 0.8rem;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  color: var(--grey-clr-drk);
+  border-radius: 100px;
+  font-weight: 600;
+}
+
+.tag--vegan {
+  background-color: #94d82d;
+}
+
+.tag--vegetarian {
+  background-color: #51cf66;
+}
+
+.tag--paleo {
+  background-color: #ffd43b;
+}
+.meal-title {
+  font-size: 2.4rem;
+  color: var(--grey-clr-drk);
+  font-weight: 600;
+  margin-bottom: 3.2rem;
+}
+
+.meal-attributes {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.meal-attribute {
+  font-size: 1.8rem;
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+}
+.meal-img {
+  width: 100%;
+}
+
+.meal-icon {
+  /*font size would also work */
+  height: 2.4rem;
+  width: 2.4rem;
+  /* could be fill or stroke */
+  color: var(--prim-clr-def);
+}
+
+.all-recipes {
+  text-align: center;
+  font-size: 1.8rem;
+}
+/***************************************************/
+/* TESTIMONIALS SECTION */
+/***************************************************/
+
+.section-testimonials {
+  padding-bottom: 9.6rem 0;
+  background-color: var(--prim-clr-bg);
+  align-items: center;
+  grid-template-columns: 5.5fr 4.5fr;
+  gap: 0;
+}
+
+/* left side of the section */
+.testimonials {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 4.8rem;
+  column-gap: 8rem;
+}
+.testimonials-text {
+  padding: 9.6rem;
+}
+.testimonial-img {
+  width: 6.4rem;
+  height: 6.4rem;
+  border-radius: 50%;
+  display: inline-block;
+}
+.testimonial-quote {
+  font-size: 1.8rem;
+  line-height: 1.8;
+  margin-bottom: 1.6rem;
+  display: block;
+}
+
+.testimonial-name {
+  font-size: 1.6rem;
+  color: var(--grey-clr-onbg);
+}
+
+/* right side of the section */
+.testimonial-photos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.6rem;
+  padding: 1.6rem; /*integrates beutifully with the gap */
+}
+
+.testimonial-photo-container {
+  overflow: hidden;
+}
+.testimonial-photos img {
+  width: 100%;
+  /* by default images are inline elements or kind of inline-block and there is like by default a small spacing around them to remove it, we could set them to be block elements */
+  display: block;
+  transition: all 0.4s;
+}
+
+.testimonial-photos img:hover {
+  transform: scale(1.1);
+}
+/***************************************************/
+/* PRICING SECTION */
+/***************************************************/
+.section-pricing {
+  padding: 9.6rem 0;
+}
+.card {
+  border: 2px solid var(--prim-clr-bg);
+  border-radius: 11px;
+  padding: 4.8rem;
+  text-align: center;
+  width: 75%;
+}
+.card--starter {
+  justify-self: end;
+  /* we reassigned padding here because we put a border for card starter but not the compelete so there is an extra 2 pixels taking more height so to compensate we will remove them from the padding */
+  padding: 4.6rem;
+}
+
+.card--complete {
+  background-color: var(--prim-clr-bg) !important;
+  position: relative;
+  overflow: hidden;
+}
+
+.card--complete::after {
+  content: "best value";
+  text-transform: uppercase;
+  background-color: #ffd43b;
+  font-weight: 500;
+  padding: 0.8rem 8rem;
+  position: absolute;
+  top: 6%;
+  right: -18%;
+  transform: rotate(45deg);
+  color: var(--grey-clr-drk);
+  font-size: 1.4rem;
+}
+
+.card-title {
+  margin-bottom: 4.8rem;
+}
+.card-name {
+  font-size: 2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--prim-clr-drk);
+  margin-bottom: 3.2rem;
+  letter-spacing: 0.75;
+}
+
+.card-currency {
+  font-size: 3rem;
+  margin-right: 0.8rem;
+  /* to center price inside card */
+  position: absolute;
+  left: -2.5rem;
+  top: 2.5rem;
+}
+
+.card-price {
+  font-size: 6.2rem;
+  color: var(--grey-clr-drk);
+  font-weight: 600;
+  margin-bottom: 1.6rem;
+  position: relative;
+  display: inline-block;
+}
+
+.card-price-description {
+  font-size: 1.6rem;
+  /* when it breaks into two lines if screen got smaller ex on mobiles */
+  line-height: 1.6;
+  color: var(--grey-clr-onbg);
+}
+
+.card .list {
+  margin-bottom: 5.4rem;
+}
+
+/***************************************************/
+/* FEATURES PART OF PRICING SECTION */
+/***************************************************/
+.features-intro {
+  font-size: 1.6rem;
+  text-align: center;
+  margin-bottom: 9.6rem;
+}
+
+.feature-title {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: var(--grey-clr-drk);
+  margin-bottom: 1.6rem;
+}
+
+.feature-description {
+  font-size: 1.6rem;
+  line-height: 1.6;
+}
+.feature-icon {
+  /* icons that are injected do not follow box sizing border box setting so if we define padding it will not be a part of the width that is assigned */
+  color: var(--prim-clr-def);
+  height: 3.2rem;
+  width: 3.2rem;
+  background-color: var(--prim-clr-bg-drk);
+  padding: 1.6rem;
+  border-radius: 50%;
+  margin-bottom: 3.2rem;
+}
+
+/***************************************************/
+/* CTA SECTION */
+/***************************************************/
+
+.section-cta {
+  /* top horizontal bottom */
+  padding: 4.8rem 0 12.8rem;
+}
+
+.cta-box {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  background-color: var(--prim-clr-drk);
+  box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.15);
+  border-radius: 11px;
+  background-image: linear-gradient(
+    to right bottom,
+    var(--prim-clr-lt),
+    var(--prim-clr-drk)
+  );
+
+  overflow: hidden;
+}
+
+.cta-img-box {
+  background-image: linear-gradient(
+      to right bottom,
+      var(--prim-clr-lt-trns35),
+      var(--prim-clr-trns35)
+    ),
+    url("../img/eating.jpg");
+  background-size: cover;
+  /* just in case the parent doesnt have enough height for whole image so center of the image should be prioritized and shown but top and bottom can be cut, default is that top is prioritized */
+  background-position: center;
+}
+
+.cta-text-box {
+  padding: 4.8rem 6.4rem 4.8rem 6.4rem;
+  color: var(--prim-clr-blk);
+}
+
+.section-cta .heading-secondary {
+  color: inherit;
+  margin-bottom: 3.2rem;
+}
+
+.cta-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 3.2rem;
+  row-gap: 2.4rem;
+  /* grid-template-rows: 1fr 1fr; */
+}
+
+.cta-description {
+  font-size: 1.8rem;
+  line-height: 1.8;
+  margin-bottom: 4.8rem;
+}
+
+.cta-form label {
+  display: block;
+  font-size: 1.6rem;
+  margin-bottom: 1.2rem;
+  font-weight: 500;
+}
+.cta-form input,
+.cta-form select {
+  padding: 1.2rem;
+  width: 100%;
+  font-size: 1.8rem;
+  font-family: inherit;
+  color: inherit;
+  border: none;
+  background-color: var(--prim-clr-bg);
+  border-radius: 9px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.cta-form input::placeholder {
+  color: #aaa;
+}
+.cta-form select {
+  font-family: inherit;
+}
+.cta-form button {
+  font-family: inherit;
+}
+
+.cta-form *:focus {
+  outline: none;
+  /* outline now conforms to the border radius of the element so it could be used beautifully but box shadow is still better  
+  outline: 4px dotted var(--prim-clr-def);
+  outline-offset: 8px; */
+  box-shadow: 0 0 0 0.8rem var(--prim-clr-bg-trns50);
+}
+
+/***************************************************/
+/* FOOTER SECTION */
+/***************************************************/
+.grid-footer {
+  grid-template-columns: 1.5fr 1.5fr 1fr 1fr 1fr;
+}
+
+.footer {
+  padding: 12.8rem 0 9.6rem 0;
+  border-top: 1px solid #eee;
+  color: var(--grey-clr-ftr);
+  font-size: 1.6rem;
+  line-height: 1.6;
+}
+/* for tabbing style */
+
+.footer *:focus {
+  box-shadow: 0 0 0 0.4rem var(--prim-clr-trns50);
+}
+.footer-link,
+.footer-logo {
+  border-radius: 100px;
+}
+.footer-link,
+.heading-footer,
+.address {
+  padding: 0.3rem 0.6rem;
+}
+.footer-logo {
+  padding: 1rem 0.4rem 0.2rem 0.6rem;
+}
+.logo-col {
+  align-items: start;
+}
+
+/* ------------col 1------------ */
+.footer-logo {
+  display: block;
+  transform: translateY(-0.4rem);
+  /* margin-bottom: 3.2rem; */
+}
+.footer-social-logo {
+  color: var(--grey-clr-def);
+  height: 2.4rem;
+  width: 2.4rem;
+}
+.footer-link a {
+  display: block;
+  padding-top: 0.7rem;
+  border-radius: 100px;
+}
+
+div.grid-footer > div,
+nav {
+  display: flex;
+  flex-direction: column;
+  gap: 3.6rem;
+}
+.social-logos {
+  list-style: none;
+  display: flex;
+  gap: 1.6rem;
+  /* bad practice to just try to align with other columns */
+  /* margin-bottom: 5.4rem; */
+}
+.copyright,
+.contacts {
+  font-size: 1.4rem;
+  margin-top: auto;
+}
+/* ------------col 2------------ */
+
+.heading-footer,
+.address {
+  color: var(--grey-clr-def);
+}
+.heading-footer {
+  font-size: 1.8rem;
+  font-weight: 500;
+  /* margin-bottom: 3.6rem; */
+}
+
+/* .address {
+  margin-bottom: 2.4rem;
+} */
+.contacts {
+  font-style: normal;
+}
+.footer-link:link,
+.footer-link:visited {
+  text-decoration: none;
+  font-size: 1.6rem;
+  transition: all 0.3s;
+  color: var(--grey-clr-def);
+}
+
+.footer-link:hover,
+.footer-link:active {
+  color: var(--grey-clr-drk);
+}
+
+/* ------------col 3------------ */
+.footer-nav {
+  list-style: none;
+  display: grid;
+  gap: 1.6rem;
+}
